@@ -1,11 +1,11 @@
 import './App.css';
-import DollarButton from './components/DollarButton';
+import HomeContainer from './containers/HomeContainer';
 
 const App = props => {
   return (
     <div className="App">
       <header className="App-header">
-        <DollarButton />
+        <HomeContainer />
       </header>
     </div>
   );
