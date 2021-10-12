@@ -1,17 +1,22 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import DollarButton from '../components/DollarButton'
 
-const HomeContainer = props => {
-    const [count, setCount] = useState(0)
+import { increaseBank } from '../store/actions/bankActions'
 
-    const imageClick = () => {
-      setCount(count + 1)
+const HomeContainer = props => {
+    const dispatch = useDispatch()
+    const bank = useSelector(state => state)
+
+    const addDollar = async () => {
+        // dispatch to bank
+        await dispatch(increaseBank(bank))
     }
 
     return (
         <div>
-            <p>You have {count} dollars in the bank</p>
-            <DollarButton imageClick={imageClick} />
+            <p>You have {bank} dollars in the bank</p>
+            <DollarButton imageClick={addDollar}/>
         </div>
     )
 }
