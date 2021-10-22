@@ -7,10 +7,10 @@ import { Provider } from 'react-redux'
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import bankReducer from './store/reducers/bankReducer'
+import rootReducer from './store/reducers/rootReducer'
 
 
-const store = createStore(bankReducer, applyMiddleware(thunk))
+const store = createStore(rootReducer, applyMiddleware(thunk))
 
 ReactDOM.render(
   <Provider store={store}>
