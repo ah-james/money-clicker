@@ -6,7 +6,7 @@ import TellerButton from '../components/TellerButton'
 
 const TellerContainer = props => {
 
-    const tellers = useSelector(state => state.tellers)
+    const tellers = useSelector((state) => Object.keys(state.tellers))
     const dispatch = useDispatch()
 
     const loadPage = useCallback(async () => {
@@ -24,9 +24,9 @@ const TellerContainer = props => {
     return(
         <div>
             <p>These are your Tellers:</p>
-            {tellers.map((teller) => {
-                return <TellerButton name={teller} />
-            })}
+            {tellers.map((teller) => 
+                <TellerButton name={teller} />
+            )}
         </div>
     )
 }

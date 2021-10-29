@@ -12,7 +12,7 @@ export const increaseBank = (bank) => {
             }
 
             let json = await response.json()
-            dispatch({type: 'INCREMENT', payload: json['data']})
+            dispatch({type: 'INCREMENT', payload: json})
         } catch (error) {
             throw error
         }
