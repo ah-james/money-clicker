@@ -1,7 +1,7 @@
 export const fetchTellers = () => {
     return async dispatch => {
         try {
-            const response = await fetch('https://money-clicker-195e4-default-rtdb.firebaseio.com/tellers')
+            let response = await fetch('https://money-clicker-195e4-default-rtdb.firebaseio.com/tellers.json')
             if (!response.ok) {
                 throw new Error('Something Went Wrong!')
             }
