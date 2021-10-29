@@ -6,7 +6,7 @@ import { increaseBank } from '../store/actions/bankActions'
 
 const HomeContainer = props => {
     const dispatch = useDispatch()
-    const bank = useSelector(state => state)
+    const bank = useSelector(state => state.bank)
 
     const addDollar = async () => {
         // dispatch to bank
