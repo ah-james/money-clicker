@@ -2,8 +2,12 @@ import React from 'react'
 
 const TellerButton = props => {
 
+    const buttonClick = () => {
+        console.log('clicked!')
+    }
+
     return (
-        <button>{props.name}</button>
+        <button onClick={() => buttonClick()}>{props.name}</button>
     )
 }
 
